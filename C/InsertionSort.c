@@ -16,10 +16,15 @@ int* InsertionSort (int* A, int n) {
   return A;
 }
 
-int main (int argsc, char** argsv) {
-  int* B = InsertionSort(A,9);
-  for (int i = 0; i < 9; i++) {
-    printf("%d\n", B[i]);
+void printArray(int* C, int n) {
+  printf("[");
+  for (int i = 0; i < n-1; i++) {
+    printf("%d, ", C[i]);
   }
+  printf("%d]\n", C[n-1]);
+}
+
+int main (int argsc, char** argsv) {
+  printArray(InsertionSort(A,9), 9);
   return 0;
 }

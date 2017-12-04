@@ -15,11 +15,10 @@ void MatrixVectorMult(int A[n][n], int B[n], int C[n], int n) {
 
 void printArray(int C[n], int n) {
   printf("[");
-  for (int i = 0; i < n; i++) {
-    printf("%d", C[i]);
-    if (i < n-1) printf(", ");
+  for (int i = 0; i < n-1; i++) {
+    printf("%d, ", C[i]);
   }
-  printf("]\n");
+  printf("%d]\n", C[n-1]);
 }
 
 int main(int argsc, char** argsv) {
