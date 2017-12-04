@@ -1,26 +1,25 @@
 #include <stdio.h>
-#include "terminalIO.c"
 
-// Takes in an array a, and the size of the array.
-int* isort (int* a, int size) {
+int A[9] = {6,2,4,8,1,9,3,5,7};
+
+int* InsertionSort (int* A, int n) {
   int i, key;
-  for (int j = 1; j < size; j++) {
-    key = a[j];
+  for (int j = 1; j < n; j++) {
+    key = A[j];
     i = j-1;
-    while ((i >= 0) && (a[i] > key)) {
-      a[i+1] = a[i];
+    while ((i >= 0) && (A[i] > key)) {
+      A[i+1] = A[i];
       i = i-1;
     }
-    a[i+1] = key;
+    A[i+1] = key;
   }
-  return a;
+  return A;
 }
 
 int main (int argsc, char** argsv) {
-  int a[9] = {9,8,7,6,5,4,3,2,1};
-  int* b = isort(a,9);
+  int* B = InsertionSort(A,9);
   for (int i = 0; i < 9; i++) {
-    printf("%d\n", b[i]);
+    printf("%d\n", B[i]);
   }
   return 0;
 }
