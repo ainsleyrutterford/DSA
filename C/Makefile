@@ -1,2 +1,2 @@
 program:
-	gcc -std=c99 -Wall -pedantic $(file).c -o output
+	gcc -std=c99 -Wall -pedantic $(file) -o output

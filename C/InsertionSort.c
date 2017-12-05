@@ -24,7 +24,7 @@ void printArray(int* C, int n) {
   printf("%d]\n", C[n-1]);
 }
 
-int main (int argsc, char** argsv) {
+int main(int argsc, char** argsv) {
   printArray(InsertionSort(A,9), 9);
   return 0;
 }
