@@ -13,8 +13,8 @@ def MaxHeapify(A, i):
         temp = A[i-1]
         A[i-1] = A[largest-1]
         A[largest-1] = temp
-        MaxHeapify(A,largest)
+        MaxHeapify(A, largest)
 
-MaxHeapify(A,2)
+MaxHeapify(A, 2)
 
 print (A)
